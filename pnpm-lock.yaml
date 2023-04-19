@@ -1,19 +1,19 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/bindings': ^1.5.1
   '@types/node': ^18.15.11
-  bindings: ^1.5.0
   ts-loader: ^9.4.2
   tsconfig-paths-webpack-plugin: ^4.0.1
   typescript: ^5.0.2
 
 dependencies:
-  bindings: 1.5.0
   ts-loader: 9.4.2_w47aegihtpb7xphih22zwk5osi
   tsconfig-paths-webpack-plugin: 4.0.1
   typescript: 5.0.2
 
 devDependencies:
+  '@types/bindings': 1.5.1
   '@types/node': 18.15.11
 
 packages:
@@ -58,6 +58,12 @@ packages:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: false
+
+  /@types/bindings/1.5.1:
+    resolution: {integrity: sha512-8HzueDeoxGXdsJ0Ep7TOXHGN+woRTWa1bAds30r5we7PCC3P5zrSTRknePLn/KYAubgQv5t/1zkonnStHLCWOg==}
+    dependencies:
+      '@types/node': 18.15.11
+    dev: true
 
   /@types/eslint-scope/3.7.4:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
@@ -236,12 +242,6 @@ packages:
       color-convert: 2.0.1
     dev: false
 
-  /bindings/1.5.0:
-    resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
-    dependencies:
-      file-uri-to-path: 1.0.0
-    dev: false
-
   /braces/3.0.2:
     resolution: {integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==}
     engines: {node: '>=8'}
@@ -353,10 +353,6 @@ packages:
 
   /fast-json-stable-stringify/2.1.0:
     resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
-    dev: false
-
-  /file-uri-to-path/1.0.0:
-    resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
     dev: false
 
   /fill-range/7.0.1:

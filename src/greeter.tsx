@@ -1,4 +1,5 @@
-const kfr = require('bindings')('kfr.node');
+import bindings from 'bindings';
+const kfr = bindings('kfr')
 
 class Student {
   fullName: string;

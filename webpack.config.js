@@ -42,14 +42,14 @@ module.exports = {
             },
         ],
     },
-    externals: [
-        ({ context, request }, callback) => {
-            if (['kfr'].indexOf(request) !== -1) {
-                return callback(null, 'commonjs ' + request);
-            }
-            callback();
-        },
-    ],
+    // externals: [
+    //     ({ context, request }, callback) => {
+    //         if (['kfr'].indexOf(request) !== -1) {
+    //             return callback(null, 'commonjs ' + request);
+    //         }
+    //         callback();
+    //     },
+    // ],
     //   resolveLoader: {
     //     modules: [path.join(__dirname, '../node_modules')],
     //     extensions: ['.ts', '.tsx', '.js', '.json', '.less'],
