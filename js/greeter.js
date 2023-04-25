@@ -22,7 +22,7 @@ function kill(person) {
 }
 let user = new Student("Jane", "M.", "User");
 // document.body.textContent = greeter(user);
-kill(user);
-console.log(user);
-console.log(kfr);
+// kill(user);
+// console.log(user)
+// console.log(kfr)
 //# sourceMappingURL=greeter.js.map

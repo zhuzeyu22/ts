@@ -30,7 +30,7 @@ let user = new Student("Jane", "M.", "User");
 
 // document.body.textContent = greeter(user);
 
-kill(user);
+// kill(user);
 
-console.log(user)
-console.log(kfr)
+// console.log(user)
+// console.log(kfr)
