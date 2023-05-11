@@ -17,6 +17,8 @@
   },
   "devDependencies": {
     "@types/bindings": "^1.5.1",
-    "@types/node": "^18.15.11"
+    "@types/node": "^18.15.11",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.9.1"
   }
 }
