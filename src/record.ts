@@ -1,15 +1,21 @@
-enum A {
-    ac = 0,
-    b = 21,
-    c = 2
+enum Fruit {
+    Apple = 'apple',
+    Banana = 'banana',
+    Orange = 'orange',
+    Pear = 'pear',
 }
 
-const B = Object.entries(A).reduce((obj: any, [key, value]) => {
-    obj[key] = Number(value) + 1;
-    return obj;
-}, {}) as { [key: string]: number };
+type FruitSubset = Pick<typeof Fruit, 'Apple' | 'Banana'>;
+// 等同于
+// type FruitSubset = {
+//   Apple: Fruit.Apple;
+//   Banana: Fruit.Banana;
+// }
+type FruitSubsetWithRecord = Record<keyof FruitSubset, FruitSubset[keyof FruitSubset]>;
+// 等同于
+// type FruitSubsetWithRecord = {
+//   Apple: Fruit.Apple;
+//   Banana: Fruit.Banana;
+// }
 
-console.log(B); // { a: 1, b: 2, c: 3 }
-console.log(Object.entries(A)); // { a: 1, b: 2, c: 3 }
-
-console.log(B); // { a: 1, b: 2, c: 3 }
+// console.log(FruitSubsetWithRecord)

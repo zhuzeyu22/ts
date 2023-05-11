@@ -1,10 +1,5 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const bindings_1 = __importDefault(require("bindings"));
-const kfr = (0, bindings_1.default)('kfr');
+import bindings from 'bindings';
+const kfr = bindings('kfr');
 class Student {
     constructor(firstName, middleInitial, lastName) {
         this.firstName = firstName;

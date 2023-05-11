@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "file": "interface.js",
+    "sourceRoot": "",
+    "sources": [
+        "../src/interface.ts"
+    ],
+    "names": [],
+    "mappings": ""
+}
