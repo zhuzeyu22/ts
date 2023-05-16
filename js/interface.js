@@ -9,7 +9,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.C = exports.IB = exports.a = void 0;
+exports.C = exports.CB = exports.IB = exports.a = void 0;
 console.log('IB.type');
 function a(serviceId) {
     const id = function (a, b, c) {
@@ -22,9 +22,11 @@ function a(serviceId) {
 }
 exports.a = a;
 exports.IB = a('IB');
+exports.CB = a('CB');
 let C = class C {
     constructor(ib) {
         this.ib = ib;
+        this.hehe = () => { };
         console.log('ib', ib);
     }
 };
@@ -38,8 +40,9 @@ class D {
     }
 }
 const d = new D(C);
-console.log('IB.type');
+// console.log('IB.type');
 console.log(d);
 console.log(new d.c());
-console.log(exports.IB.type);
+console.log(exports.IB);
+console.log(exports.IB);
 //# sourceMappingURL=interface.js.map
