@@ -18,13 +18,18 @@ export function a<T>(serviceId?: string): A<T> {
 }
 
 export const IB = a<IB>('IB');
+export const CB = a<CB>('CB');
 // export const IB = createDecorator<IB>('IB');
 
 export interface IB {
-    hehe: () => {};
+    hehe: Function;
 }
 
-export class C {
+export interface CB {
+}
+
+export class C implements IB {
+    hehe = () => { };
     constructor(
         @IB
         readonly ib: IB
@@ -42,4 +47,5 @@ const d = new D(C);
 // console.log('IB.type');
 console.log(d);
 console.log(new d.c());
+console.log(IB);
 console.log(IB);
