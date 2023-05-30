@@ -1,8 +1,9 @@
 // can not "use strict";
-msg = 'msg_foo_1';
-function foo(a: any) {
-    msg = 'msg_foo_2';
-    console.log(this.msg, a);
+// 由于浏览器安全问题，严格模式中 this 不再默认为上下文环境对象
+const msg = 'msg_foo_1';
+function foo(this: any, a: any) {
+    const msg = 'msg_foo_2';
+    console.log(this?.msg, a);
 }
 
 const obj_1 = { msg: 'msg_1' };
