@@ -1,12 +1,14 @@
 
-function fooarg(this: any, a: any, b: any) {
-    this.a = a;
-    this.b =b
-    this.get = (target: object, prop: PropertyKey, receiver?: unknown) => {
-        console.log(target);
-        // TS 里面强制类型转换
-        return Reflect.get(...arguments as unknown as [target: object, prop: PropertyKey, receiver?: unknown]);
-    };
+const obj = {
+    fooarg(this: any, a: any, b: any) {
+        this.a = a;
+        this.b =b
+        this.get = (target: object, prop: PropertyKey, receiver?: unknown) => {
+            console.log(target);
+            // TS 里面强制类型转换
+            return Reflect.get(...arguments as unknown as [target: object, prop: PropertyKey, receiver?: unknown]);
+        };
+    }
 }
 
 const a = {
@@ -14,12 +16,21 @@ const a = {
         
     }
 }
-Reflect.apply(fooarg, a, ['222', '333']);
 
-console.log(a.a)
-console.log(a.b)
-fooarg('222', '333'); 
+const c = {
+    a:'ca',
+    b:'cb',
+}
 
+Reflect.apply(obj.fooarg, a, ['22', '33']);
+console.log(a)
+console.log(Reflect.get(a, 'a'))
+console.log(Reflect.get(a, 'b'))
+console.log(Reflect.get(a, 'a',c))
+
+obj.fooarg('222', '333'); 
+
+debugger
 // const target = {
 //     message1: "hello",
 //     message2: "everyone",

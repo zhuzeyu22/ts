@@ -5,3 +5,6 @@ js
 *.js
 *.map
 node_modules
+
+dist
+dist/
