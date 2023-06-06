@@ -1,12 +1,14 @@
 // Reflect
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect
 
-// 以下是等价的
+// Reflect.apply
+// ------------------------------
 Math.floor.apply(null, [1.75]);
 Reflect.apply(Math.floor, null, [1.75]);
 
 
-// 
+// Reflect.construct
+// ------------------------------
 function func1(this: any, a: any, b: any, c: any) {
     this.sum = a + b + c;
 }
