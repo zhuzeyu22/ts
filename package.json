@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "publishConfig": {
-    "registry": "http://localhost:8081/repository/npm-custom/",
-    "access": "public"
-  },
   "private": true,
   "workspaces": [
     "modules/*"

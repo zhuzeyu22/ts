@@ -1,8 +1,12 @@
-export class A {
-    get onDidChangeCollections() {
-        return 'qweqweqwewqe';
-    }
+import { classicNameResolver } from "typescript";
 
+export class A {
+    get onDid() {
+        return 'did this';
+    }
+    constructor() {
+        console.log('init')
+    }
     set(a: string, b: string[]) {
         console.log('this.set');
     }
@@ -11,12 +15,26 @@ export class A {
     }
 }
 
-const CLASSA = new A();
+const a = new A();
 
-CLASSA.set('qwe', []);
-console.log(CLASSA.onDidChangeCollections); 
+a.set('qwe', []);
+console.log(a.onDid);
 
 // --------- class 和 function 区别
 // ES6 开始引入 class 的概念
 
 // function 
+
+export interface IAct {
+    run: Function,
+    wolk: Function,
+}
+
+export class Act implements IAct {
+    constructor(
+        run: Function = () => { },
+        wolk: Function = () => { }
+    ){
+        
+    }
+}
