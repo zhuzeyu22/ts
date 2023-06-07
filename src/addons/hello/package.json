@@ -1,7 +1,7 @@
 {
   "name": "@ace/hello",
   "version": "1.0.0",
-  "main": "build/Release/hello.node",
+  "main": "index.js",
   "author": "ace",
   "license": "MIT",
   "scripts": {

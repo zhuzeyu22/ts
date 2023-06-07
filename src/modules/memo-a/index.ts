@@ -1,4 +1,4 @@
-import { hello } from '@ace/hello'
+import { hello } from '@ace/hello';
 
 export namespace mimo {
     export class M_A {
@@ -8,6 +8,4 @@ export namespace mimo {
     }
 }
 
-console.log(hello)
-
-hello()
+console.log(hello())
