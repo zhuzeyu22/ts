@@ -1,3 +1,4 @@
+// 柯里化
 function curry(f: Function) {
     return function (a: any) {
         return function (b: any) {
