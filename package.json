@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "workspaces": [
-    "modules/*",
+    "src/modules/*",
     "src/addons/*"
   ],
   "scripts": {
