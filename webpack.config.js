@@ -7,7 +7,7 @@ const distDir = path.join(__dirname, './dist');
 
 module.exports = {
     mode: 'development',
-    entry: path.join(srcDir, './greeter.ts'),
+    entry: path.join(srcDir, './index.ts'),
     target: 'electron-main',
     output: {
         filename: 'index.js',
@@ -15,7 +15,10 @@ module.exports = {
     },
     node: false,
     resolve: {
-        extensions: ['.ts', '.tsx', '.mjs', '.js', '.json', '.less'],
+        alias: {
+            '@ace': path.resolve(__dirname, 'node_modules/@ace'),
+        },
+        extensions: ['.ts', '.tsx', '.mjs', '.js', '.json', '.less', '.node'],
         mainFields: ['main'],
         plugins: [
             new TsconfigPathsPlugin({
@@ -40,6 +43,10 @@ module.exports = {
                 include: /node_modules/,
                 type: 'javascript/auto',
             },
+            {
+                test: /\.node$/,
+                loader: "node-loader",
+            }
         ],
     },
     // externals: [
