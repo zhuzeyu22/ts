@@ -1,5 +1,5 @@
 {
-  "name": "memo-a",
+  "name": "@ace/memo-a",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "memo-b": "./modules/memo-b"
+    "@ace/hello": "workspace:^"
   }
 }
