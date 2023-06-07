@@ -4,7 +4,7 @@ const obj = {
         this.a = a;
         this.b =b
         this.get = (target: object, prop: PropertyKey, receiver?: unknown) => {
-            console.log(target);
+            console.log('obj', target);
             // TS 里面强制类型转换
             return Reflect.get(...arguments as unknown as [target: object, prop: PropertyKey, receiver?: unknown]);
         };
@@ -12,8 +12,9 @@ const obj = {
 }
 
 const a = {
-    get(){
-        
+    get(target: object, prop: PropertyKey, receiver?: unknown){
+        console.log('a')
+        return Reflect.get(...arguments as unknown as [target: object, prop: PropertyKey, receiver?: unknown]);
     }
 }
 
@@ -26,10 +27,10 @@ Reflect.apply(obj.fooarg, a, ['22', '33']);
 console.log(a)
 console.log(Reflect.get(a, 'a'))
 console.log(Reflect.get(a, 'b'))
-console.log(Reflect.get(a, 'a',c))
+console.log(Reflect.get(a, 'a', c))
+
 
 obj.fooarg('222', '333'); 
-
 debugger
 // const target = {
 //     message1: "hello",
