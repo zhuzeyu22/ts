@@ -1,5 +1,5 @@
-import bindings from 'bindings';
-const kfr = bindings('kfr')
+// import bindings from 'bindings';
+// const kfr = bindings('kfr')
 
 class Student {
   fullName: string;

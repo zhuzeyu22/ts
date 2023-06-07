@@ -7,6 +7,7 @@ export interface A<T> {
 }
 
 export function a<T>(serviceId?: string): A<T> {
+    // const id = <A<T>>function (a: any, b: any, c: any) {
     const id = <any>function (a: any, b: any, c: any) {
         if (arguments.length !== 3) {
             throw new Error('@IServiceName-decorator can only be used to decorate a parameter');
