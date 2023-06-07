@@ -1,10 +1,18 @@
-node_modules/*
+# npm
 pnpm-lock.yaml
+node_modules
+node_modules/*
+
+# electron
 app
+
+# ts
+dist
+dist/
 js
 *.js
 *.map
-node_modules
 
-dist
-dist/
+# node-gyp
+build
+build/*
