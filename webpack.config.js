@@ -1,7 +1,9 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+
 const path = require('path');
 
 const tsConfigPath = path.join(__dirname, './tsconfig.json');
+
 const srcDir = path.join(__dirname, './src');
 const distDir = path.join(__dirname, './dist');
 
@@ -10,7 +12,7 @@ module.exports = {
     entry: path.join(srcDir, './index.ts'),
     target: 'electron-main',
     output: {
-        filename: 'index.js',
+        filename: 'main.js',
         path: distDir,
     },
     node: false,
