@@ -1,3 +1,5 @@
+import { hello } from '@ace/hello'
+
 export namespace mimo {
     export class M_A {
         sayHello() {
@@ -5,3 +7,7 @@ export namespace mimo {
         }
     }
 }
+
+console.log(hello)
+
+hello()

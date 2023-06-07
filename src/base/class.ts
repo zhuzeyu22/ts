@@ -1,4 +1,3 @@
-import { classicNameResolver } from "typescript";
 
 export class A {
     get onDid() {
@@ -37,4 +36,6 @@ export class Act implements IAct {
     ){
         
     }
+    run!: Function;
+    wolk!: Function;
 }

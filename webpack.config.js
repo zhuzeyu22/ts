@@ -3,7 +3,7 @@ const path = require('path');
 
 const tsConfigPath = path.join(__dirname, './tsconfig.json');
 const srcDir = path.join(__dirname, './src');
-const distDir = path.join(__dirname, './app');
+const distDir = path.join(__dirname, './dist');
 
 module.exports = {
     mode: 'development',
