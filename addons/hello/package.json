@@ -1,0 +1,13 @@
+{
+  "name": "@ace/hello",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ace",
+  "license": "MIT",
+  "scripts": {
+    "build": "node-gyp configure build"
+  },
+  "devDependencies": {
+    "node-gyp": "^9.3.1"
+  }
+}
