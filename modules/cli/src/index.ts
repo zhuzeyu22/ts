@@ -1,44 +1,59 @@
 #!/usr/bin/env node
+
 import { Command } from 'commander';
 import _package from '../package.json';
 import { promisify } from 'util';
 import chalk from 'chalk'; // 修改控制台中字符串的样式
 import ora from 'ora';
+import rsync from 'rsync';
+// import figlet from 'figlet';
+import clear from 'clear'; // 控制台清屏
 
-var downloadUrl = require('download');
-var gitclone = require('git-clone');
-var rm = require('rimraf').sync;
+// const figletPromise = (txt: string) => new Promise((resolve, reject) => {
+//     figlet(txt, (error, result) => {
+//         if (error) {
+//             return reject(error);
+//         }
+//         resolve(result);
+//     });
+// });
 
-const figlet = promisify(require('figlet'));
+const log = (ctx: any) => console.log(chalk.green(ctx));   // 封装日志输出
+
+// import { sync as rm } from 'rimraf';
+// var rm = require('rimraf').;
 // const download = promisify(require('download-git-repo')); // 下载组件
-
-const clear = require('clear'); // 控制台清屏
-const log = (ctx: any) => console.log(chalk.green(ctx)); // 封装日志输出
-
-const repo = "https://gitee.com/kiyun/et_tools.git/";
+// const clear = require('clear'); 
+// async function qwe() {
+//     log(await figletPromise('Hello '));
+// }
 
 const program = new Command();
-
 program.version(_package.version);
-
 program
-    .command('init <pkg name>')
+    .command('cp <src> <dist>')
     .description('init extension template')
-    .action(async (name) => {
-        clear();
-        log(await figlet('Hello ' + name));
+    .option("-i, --ignore <type>", "set gitignore file default ./.gitignore")
+    .action(async (src, dist, options, command) => {
+        console.log('src', src);
+        console.log('dist', dist);
+        console.log('options', options);
+        // console.log('command', command);
+        
+        // clear();
+        
+        // log(await figletPromise('Hello ' + dist));
+        // console.log(await figletPromise('Hello ' + dist))
 
-        const process = ora(`⏳下载...... ${repo}`);
-        process.start();
+        const p = ora(`⏳复制...... ${src} to ${dist}`);
+        p.start();
 
-        // gitclone(repo, name, { checkout: 'template', shallow: true }, function (err: any) {
-        //     if (err === undefined) {
-        //         rm(name + '/.git');
-        //     } else {
-        //     }
-        // });
+        const r = new rsync();
+        r.source(src)
+            .destination(dist)
+            .exclude(options.ignore || '.gitignore');
 
-        process.succeed();
+        p.succeed();
         log(`安装完成`);
     });
 
