@@ -43,6 +43,8 @@ console.log(D.prototype.constructor.name)
 
 // D type is function
 console.log(d.__proto__)
+console.log(d.prototype)
+console.log(Object.getPrototypeOf(d))
 
 // C type is function
 console.log(d.__proto__.__proto__)

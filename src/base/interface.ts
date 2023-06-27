@@ -24,6 +24,8 @@ export const CB = a<CB>('CB');
 
 export interface IB {
     hehe: Function;
+    // 任意属性
+    [key: string]: any;
 }
 
 export interface CB {
