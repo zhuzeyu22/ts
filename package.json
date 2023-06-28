@@ -6,9 +6,6 @@
   "types": "src/index.ts",
   "private": true,
   "workspaces": [
-    "modules/*",
-    "addons/*",
-    "extensions/*",
     "interview"
   ],
   "scripts": {
@@ -24,6 +21,7 @@
     "cross-env": "^7.0.3",
     "jest": "^29.5.0",
     "mobx": "^6.9.0",
+    "puppeteer": "^20.7.3",
     "rsync": "^0.6.1",
     "typescript": "^5.0.2"
   },
@@ -33,7 +31,6 @@
     "@babel/preset-typescript": "^7.21.5",
     "@types/bindings": "^1.5.1",
     "@types/node": "^18.15.11",
-    "electron": "^25.0.1",
     "node-gyp": "^9.3.1",
     "node-loader": "^2.0.0",
     "source-map-support": "^0.5.21",

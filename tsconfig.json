@@ -4,7 +4,8 @@
     "src/**/dist/**"
   ],
   "include": [
-    "src/**/*"
+    // "src/**/*"
+    "src/robot/*"
   ],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
