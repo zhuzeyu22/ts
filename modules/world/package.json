@@ -2,7 +2,7 @@
   "name": "@ace/world",
   "version": "1.0.0",
   "description": "Make an ai player world!",
-  "main": "main.js",
+  "main": "dist/main.js",
   "scripts": {
     "start": "electron ."
   },
@@ -10,6 +10,15 @@
   "license": "MIT",
   "packageManager": "yarn@3.6.0",
   "devDependencies": {
-    "electron": "^25.0.1"
+    "@types/node": "^20.3.2",
+    "@webpack-cli/generators": "^3.0.7",
+    "electron": "^25.0.1",
+    "esbuild-loader": "^3.0.1",
+    "node-loader": "^2.0.0",
+    "ts-loader": "^9.4.4",
+    "tsconfig-paths-webpack-plugin": "^4.0.1",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
   }
 }

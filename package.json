@@ -40,7 +40,8 @@
     "ts-node": "^10.9.1",
     "tsconfig-paths-webpack-plugin": "^4.0.1",
     "turbo": "^1.10.2",
-    "webpack": "^5.85.1"
+    "webpack": "^5.85.1",
+    "webpack-cli": "^5.1.4"
   },
   "packageManager": "yarn@3.6.0"
 }
