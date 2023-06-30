@@ -1,3 +1,3 @@
-import { hello } from '@ace/hello';
+// import { hello } from '@ace/hello';
 
-console.log(hello())
+// console.log(hello())

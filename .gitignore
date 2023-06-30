@@ -21,3 +21,6 @@ build/*
 
 # chrome
 userData
+
+# yarn
+yarn.lock

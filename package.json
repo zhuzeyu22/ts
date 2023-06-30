@@ -6,7 +6,9 @@
   "types": "src/index.ts",
   "private": true,
   "workspaces": [
-    "interview"
+    "interview",
+    "modules/*",
+    "addons/*"
   ],
   "scripts": {
     "compile": "tsc.CMD",
