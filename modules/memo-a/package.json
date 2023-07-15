@@ -9,8 +9,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@ace/hello": "workspace:^"
-  }
+  "license": "ISC"
 }
