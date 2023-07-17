@@ -9,13 +9,13 @@ const distDir = path.join(__dirname, './dist');
 
 module.exports = {
     mode: 'development',
-    entry: path.join(srcDir, './index.ts'),
-    target: 'node',
-    output: {
-        filename: 'main.js',
-        path: distDir,
-    },
+    entry: path.join(srcDir),
+    target: 'node14.17',
     node: false,
+    output: {
+        path: path.join(__dirname, 'dist'),
+        filename: '[name].[chunkhash].js'
+    },
     resolve: {
         modules: ['node_modules'],
         extensions: ['.ts', '.tsx', '.mjs', '.js', '.json', '.less', '.node'],
