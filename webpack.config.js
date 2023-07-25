@@ -9,19 +9,16 @@ const distDir = path.join(__dirname, './dist');
 
 module.exports = {
     mode: 'development',
-    entry: path.join(srcDir, './index.ts'),
-    target: 'electron-main',
-    output: {
-        filename: 'main.js',
-        path: distDir,
-    },
+    entry: path.join(srcDir),
+    target: 'node14.17',
     node: false,
+    output: {
+        path: path.join(__dirname, 'dist'),
+        filename: '[name].[chunkhash].js'
+    },
     resolve: {
-        alias: {
-            '@ace': path.resolve(__dirname, 'node_modules/@ace'),
-        },
+        modules: ['node_modules'],
         extensions: ['.ts', '.tsx', '.mjs', '.js', '.json', '.less', '.node'],
-        mainFields: ['main'],
         plugins: [
             new TsconfigPathsPlugin({
                 configFile: tsConfigPath,
@@ -51,17 +48,4 @@ module.exports = {
             }
         ],
     },
-    // externals: [
-    //     ({ context, request }, callback) => {
-    //         if (['kfr'].indexOf(request) !== -1) {
-    //             return callback(null, 'commonjs ' + request);
-    //         }
-    //         callback();
-    //     },
-    // ],
-    //   resolveLoader: {
-    //     modules: [path.join(__dirname, '../node_modules')],
-    //     extensions: ['.ts', '.tsx', '.js', '.json', '.less'],
-    //     mainFields: ['loader', 'main'],
-    //   },
 };
