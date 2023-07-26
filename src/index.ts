@@ -4,3 +4,4 @@
 import { demo } from './base/glob';
 
 demo();
+debugger
