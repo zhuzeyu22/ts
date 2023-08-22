@@ -1,0 +1,13 @@
+{
+  "name": "g",
+  "packageManager": "yarn@3.6.1",
+  "devDependencies": {
+    "@webpack-cli/generators": "^3.0.7"
+  },
+  "type": "module",
+  "main": "index.ts",
+  "dependencies": {
+    "@types/glob": "^8.1.0",
+    "glob": "^10.3.3"
+  }
+}

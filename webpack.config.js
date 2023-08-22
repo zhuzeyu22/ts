@@ -1,4 +1,5 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const nodeExternals = require('webpack-node-externals');
 
 const path = require('path');
 
@@ -7,10 +8,14 @@ const tsConfigPath = path.join(__dirname, './tsconfig.json');
 const srcDir = path.join(__dirname, './src');
 const distDir = path.join(__dirname, './dist');
 
+
+/** @type {import("webpack").Configuration} */
 module.exports = {
     mode: 'development',
     entry: path.join(srcDir),
-    target: 'node14.17',
+    // target: 'node14.17',
+    target: 'node',
+    externals: [nodeExternals()],
     node: false,
     output: {
         path: path.join(__dirname, 'dist'),
@@ -30,12 +35,14 @@ module.exports = {
         exprContextCritical: false,
         rules: [
             {
-                test: /\.tsx?$/,
-                loader: 'ts-loader',
-                options: {
-                    configFile: tsConfigPath,
-                    transpileOnly: true,
-                },
+                // Match js, jsx, ts & tsx files
+                test: /\.[jt]sx?$/,
+                loader: "esbuild-loader",
+                // options: {
+                //     // JavaScript version to compile to
+                //     // target: "es2015",
+                //     tsconfig: "./tsconfig.custom.json",
+                // },
             },
             {
                 test: /\.mjs$/,
