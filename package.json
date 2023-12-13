@@ -6,7 +6,8 @@
   "types": "src/index.ts",
   "private": true,
   "workspaces": [
-    "modules/*"
+    "modules/*",
+    "src"
   ],
   "scripts": {
     "compile": "tsc.CMD",
@@ -24,6 +25,7 @@
     "jest": "^29.5.0",
     "mobx": "^6.9.0",
     "puppeteer": "^20.7.3",
+    "react": "^18.2.0",
     "rsync": "^0.6.1",
     "typescript": "^5.0.2",
     "webpack-node-externals": "^3.0.0"
